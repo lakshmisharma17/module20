@@ -51,10 +51,9 @@ https://www.kaggle.com/datasets/camnugent/california-housing-prices
 
 #### Next steps
 
-- Explore advanced models (Random Forest, Gradient Boosting, XGBoost).
+- Explore advanced models (Random Forest and Gradient Boosting).
 - Perform hyperparameter tuning to improve accuracy.
 - Use pipeline and add scaling 
-- Investigate feature interactions and non-linear relationships.
 - (optional) Visualize geographic trends using heatmaps.
 
 #### Outline of project
