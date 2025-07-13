@@ -1,84 +1,67 @@
 # module20
 
-# California Housing Price Prediction: Capstone Project
+### California Housing Price Prediction: Capstone Project
 
-## 📘 Overview
+**Author**
+Lakshmi Sharma @lakshmisharma17
+
+#### Executive summary
+
 This project investigates the research question:  
 **“How do socio-economic and geographic factors influence housing prices in California, and can machine learning models accurately predict housing prices based on these features?”**  
 
-The goal is to perform exploratory data analysis (EDA), clean and engineer features, and build a baseline machine learning model to predict housing prices. Insights from this work will inform future iterations with more advanced models and optimizations.  
+The goal is to perform exploratory data analysis (EDA), clean and engineer features, and build a baseline machine learning model to predict housing prices. Insights from this work will inform future iterations with more advanced models and optimizations.
 
----
+#### Rationale
 
-## 🎯 Objectives
-- Perform EDA to understand patterns and relationships in the data.  
-- Clean and preprocess the dataset to prepare it for modeling.  
-- Engineer relevant features to enhance model performance.  
-- Develop and evaluate a baseline machine learning model.  
-- Analyze results and identify next steps for improvement.  
+As a resident of California for decades and an  active volunteer in California’s state and city libraries, arts programs, and schools, I have witnessed firsthand the impact of rising housing prices on people’s lives. These increases have affected the overall quality of government spending on essential infrastructure and have had a particularly negative impact on talent pool (young families moving out of state due to unaffordability of housing) and small business owners.
 
----
+Understanding the socio-economic and geographic factors that influence housing prices is critical for stakeholders such as policymakers, real estate developers, and buyers. A predictive model can help anticipate trends and make data-driven decisions to make targeted investments in infrastructure and retain the talent as well as help small buisness owners.
 
-## 📊 Data Cleaning and EDA
+#### Research Question
 
-### ✅ Steps Taken:
-1. **Handle Missing Values:**
-   - Total missing values: `207` in `total_bedrooms`
-   - Action: Removed rows with missing values.
-   - Shape reduced from **(20,640, 10)** to **(20,433, 10)**.
+How do socio-economic and geographic factors influence housing prices in California, and can machine learning models accurately predict housing prices based on these features?
 
-2. **Remove Duplicates:**
-   - No duplicates found. Shape unchanged: **(20,433, 10)**.
+#### Data Sources
 
-3. **Outlier Detection and Removal:**
-   - Used the **IQR method** to identify outliers in numeric columns.
-   - Shape reduced from **(20,433, 10)** to **(17,434, 10)**.
+California housing dataset (20,640 rows, 10 features) sourced from following kaggle repository:
+https://www.kaggle.com/datasets/camnugent/california-housing-prices  
 
-4. **Feature Engineering:**
-   - Encoded `ocean_proximity` using one-hot encoding.  
-   - Created new features:  
-     - `rooms_per_household`
-     - `rooms_that_are_bedrooms`
-     - `population_per_household`  
-   - Final dataset shape: **(17,434, 16)**  
+#### Methodology
 
----
+- **Data Cleaning and EDA:**
+  - Removed 207 rows with missing values in `total_bedrooms`.
+  - Outliers removed using IQR method, reducing dataset to **(17,434, 10)**.
+  - Feature engineering: one-hot encoding for `ocean_proximity` and creation of new features (`rooms_per_household`, `rooms_that_are_bedrooms`, `population_per_household`).
+  - Final dataset shape: **(17,434, 16)**.
 
-## 🤖 Baseline Model: Linear Regression
+- **Baseline Model:**
+  - **Linear Regression** trained with an 80/20 train-test split.
+  - **Evaluation metrics:**
+    - MSE: 3,213,623,454.58
+    - RMSE: $56,688.83
+    - R²: 0.6311
+  - **Key features:** `rooms_that_are_bedrooms`, `median_income`, `ocean_proximity_ISLAND`, `longitude`, `latitude`
 
-### 📁 Modeling Steps
-1. **Data Split:**
-   - Train/Test split: 80% / 20%  
-   - X_train shape: **(13,947, 15)**  
-   - X_test shape: **(3,487, 15)**  
+#### Results
 
-2. **Train Baseline Model:**
-   - Used **Linear Regression** from `sklearn`.  
+- The Linear Regression baseline explains **63.1%** of the variance in housing prices.
+- RMSE of ~$56K highlights room for improvement.
+- Socio-economic and geographic factors are strong predictors.
 
-3. **Model Evaluation:**
-   - **Mean Squared Error (MSE):** 3,213,623,454.58  
-   - **Root Mean Squared Error (RMSE):** $56,688.83  
-   - **R-squared (R²):** 0.6311  
+#### Next steps
 
-4. **Feature Importance:**
-   - Top influencing features:  
-     - `rooms_that_are_bedrooms`
-     - `ocean_proximity_ISLAND`
-     - `median_income`
-     - `longitude`, `latitude`
+- Explore advanced models (Random Forest, Gradient Boosting, XGBoost).
+- Perform hyperparameter tuning to improve accuracy.
+- Use pipeline and add scaling 
+- Investigate feature interactions and non-linear relationships.
+- (optional) Visualize geographic trends using heatmaps.
 
----
+#### Outline of project
 
-## 📌 Key Insights
-- The Linear Regression baseline explains **63.1%** of the variance in housing prices.  
-- Average prediction error (RMSE) of ~$56K highlights room for improvement.  
-- **Socio-economic (median income)** and **geographic factors (latitude, longitude, ocean proximity)** are strong predictors of housing prices.  
 
----
 
-## 🚀 Potential Next Steps
-- Explore advanced models: **Random Forest, Gradient Boosting, or XGBoost**.  
-- Perform hyperparameter tuning to improve accuracy.  
-- Investigate feature interactions and non-linear relationships.  
-- Visualize geographic trends using heatmaps.  
+##### Contact and Further Information
+@Lakshmisharma17 (gitHub handle) 
+Student of Professional Certificate in Machine Learning and Artificial Intelligence, Jan 2025 Cohort
 
