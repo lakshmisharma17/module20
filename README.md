@@ -1,5 +1,4 @@
 # module20
-Capstone Submission Module 20-1
 
 # California Housing Price Prediction: Capstone Project
 
