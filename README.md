@@ -16,7 +16,7 @@ The goal is to perform exploratory data analysis (EDA), clean and engineer featu
 
 As a resident of California for decades and an  active volunteer in California’s state and city libraries, arts programs, and schools, I have witnessed firsthand the impact of rising housing prices on people’s lives. These increases have affected the overall quality of government spending on essential infrastructure and have had a particularly negative impact on talent pool (young families moving out of state due to unaffordability of housing) and small business owners.
 
-Understanding the socio-economic and geographic factors that influence housing prices is critical for stakeholders such as policymakers, real estate developers, and buyers. A predictive model can help anticipate trends and make data-driven decisions to make targeted investments in infrastructure and retain the talent as well as help small buisness owners.
+Understanding the socio-economic and geographic factors that influence housing prices is critical for stakeholders such as policymakers, real estate developers, and buyers. A predictive model can help anticipate trends and make data-driven decisions to make targeted investments in infrastructure and retain the talent as well as help small buisness owners in California State in the United States.
 
 #### Research Question
 
@@ -58,10 +58,10 @@ https://www.kaggle.com/datasets/camnugent/california-housing-prices
 - (optional) Visualize geographic trends using heatmaps.
 
 #### Outline of project
-
-
+- Link to the notebook
+https://github.com/lakshmisharma17/module20/blob/main/Capstone_Module20_1.ipynb
 
 ##### Contact and Further Information
 @Lakshmisharma17 (gitHub handle) 
-Student of Professional Certificate in Machine Learning and Artificial Intelligence, Jan 2025 Cohort
+Student of 'Professional Certificate in Machine Learning and Artificial Intelligence', Jan 2025 Cohort
 
